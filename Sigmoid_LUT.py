@@ -7,16 +7,17 @@
 import numpy as np
 import math
 
+# Original Sigmoid function
 def f(x):
     return 1/(1+math.e**-x)
 
-# Initialize
-xmin = -5
-xmax = +5
-S = 256
-dx = (xmax - xmin)/S
+# Initialize:
+xmin = -5                # lower bound
+xmax = +5                # upper bound 
+S = 256                  # number of samples
+dx = (xmax - xmin)/S     # step size
 
-# Build up the look-up table
+# Build up the look-up table using the original function:
 Y = [f(x) for x in np.arange(xmin,xmax,dx)]
 
 # look-up example
