@@ -15,12 +15,12 @@ def f_inv(x):
     return 1/x
 
 # Initialize
-xmin = -5
-xmax = +5
-S = 128
-dx = (xmax - xmin)/S
+xmin = -5                # lower bound
+xmax = +5                # upper bound 
+S = 128                  # number of samples
+dx = (xmax - xmin)/S     # step size
 
-# Build up the look-up tables
+# Build up the look-up tables using the original functions
 exp = [f_exp(x) for x in np.arange(xmin,xmax,dx)]
 inv = [f_inv(x) for x in np.arange(xmin,xmax,dx)]
 
