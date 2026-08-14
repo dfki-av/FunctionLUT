@@ -7,7 +7,7 @@
 import numpy as np
 import math
 
-# Original Sigmoid function
+# Original Sigmoid function (for custom functions, change f(x), xmin, xmax and S below)
 def f(x):
     return 1/(1+math.e**-x)
 
